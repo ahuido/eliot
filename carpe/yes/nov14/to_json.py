@@ -42,8 +42,6 @@ def read_content():
                 print(line)
             if tmp[0] == '***':
                 break
-
-def read_between(start, stop):
     
 
 def read_test():

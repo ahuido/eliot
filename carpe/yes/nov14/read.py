@@ -12,17 +12,19 @@ f_v1 = open('v1')
 f_v2 = open('v2')
 f_v3 = open('v3')
 
+
 def super_line():
     haha_line = re.sub(r'\s', " ", str(f_v1))
     print(haha_line)
-    
+
+
 def test_tod():
-    count  = 0
+    count = 0
     for line in f_v1:
         count = count + 1
-        #if count == 20:
+        # if count == 20:
         #    break
-        #else:
+        # else:
         #    print(line)
         if line == r'CONTENTS.\r\n':
             break

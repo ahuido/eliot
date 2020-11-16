@@ -1,3 +1,4 @@
+```
 The Project Gutenberg Etext of ...
 ...
 Title: ...
@@ -184,7 +185,7 @@ ANOTHER FRAGMENT (B)
 NOTES:
 ...
 ***
-
+```
 > Lines between square brackets, delete (Usually the brackets are separated in multiple lines).
 > Five lines before '_5' sign.
 > Less than five line after '_\d' sign, up till the next CAPITAL line.
@@ -218,3 +219,27 @@ NOTES:
 2. Clean extracted lines in the following order:
    - 
 
+> This should be contained in one Class definition.
+> Tag lines with 'capital', 'nonwords', 'note', 'numbered' or others.
+- `def is_capital(line):`'SCENE.--BEFORE THE...'
+- `def is_nonwords(line):`'***'
+- `def is_note(line):`'_45 may Hunt manuscript; can...'
+- `def is_numbered(line):`'Is the unheeded clanking of my chains,      _630'
+
+> Recognize the middle of a fragment (neither the beginning 5 nor the last <=5 lines).
+- `def print_middle(line_with_num):`
+> Recognize the beginning of a fragment (print the beginning 5 lines to `stdout`).
+- `def print_beginning(line_with_5):`
+> Recognize the ending of a fragment (print the ending <=5 lines to `stdout`).
+- `def print_ending(line_with_):`
+> Given a `numbered` line, extract the number, check if the line starts the ending segment of this fragment.
+- `def check_ending_segment(line_with_num):`
+
+> Given text of a book. Recognize 
+>
+> Should maintain a list of current buffer
+
+```
+def check_ending_segment(line_with_num):
+    # remove  
+```
